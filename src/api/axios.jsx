@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://vercel-backend-lone.vercel.app/api",
+  baseURL: "https://vercel-backend-lone.onrender.com/api",
 });
 
 instance.interceptors.request.use(
