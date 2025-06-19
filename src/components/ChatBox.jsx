@@ -13,7 +13,9 @@ import io from "socket.io-client";
 import { useAuth } from "../context/AuthContext";
 import axios from "../api/axios";
 
-const socket = io("https://vercel-backend-lone.vercel.app");
+const socket = io("https://vercel-backend-lone.vercel.app", {
+  transports: ["websocket"]
+});
 
 const ChatBox = ({ roomId, partnerName }) => {
   const { user } = useAuth();
