@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import registerImage from "../assets/register-illustration.jpg.jpg"; 
+import registerImage from "../assets/register-illustration.jpg.jpg";
 import axios from "../api/axios";
 
 const MotionBox = motion(Box);
@@ -78,7 +78,7 @@ const Register = () => {
 
   return (
     <Flex minH="100vh" direction={{ base: "column", md: "row" }}>
-     
+
       <Box flex={1} bg="purple.50" display={{ base: "none", md: "block" }}>
         <Image
           src={registerImage}

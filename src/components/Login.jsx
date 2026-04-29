@@ -13,10 +13,10 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { motion } from "framer-motion";
-import loginImage from "../assets/login-illustration.jpg.jpg"; 
-import axios from "../api/axios"; 
+import loginImage from "../assets/login-illustration.jpg.jpg";
+import axios from "../api/axios";
 
-const MotionBox = motion(Box); 
+const MotionBox = motion(Box);
 
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -29,7 +29,7 @@ const Login = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // ✅ prevent form reload
+    e.preventDefault(); 
     try {
       const res = await axios.post("/auth/login", form);
       login(res.data.user, res.data.token);
